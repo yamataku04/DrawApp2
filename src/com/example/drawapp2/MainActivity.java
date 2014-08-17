@@ -3,6 +3,7 @@ package com.example.drawapp2;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,13 +20,19 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		Button button=(Button) findViewById(R.id.button1);
-		button.setOnClickListener(new OnClickListener(){
+		button.setOnClickListener(new OnClickListener(){//タッチされるまで待機している
 			
 			@Override
 			public void onClick(View v){
 				Toast.makeText(context, "Touchされました",Toast.LENGTH_SHORT).show();
 			}
 		});
+		Log.v("TAG","verbose");
+		Log.d("TAG","verbose");
+		Log.i("TAG","verbose");
+		Log.w("TAG","verbose");
+		Log.e("TAG","verbose");
+		
 	}
 
 	@Override
